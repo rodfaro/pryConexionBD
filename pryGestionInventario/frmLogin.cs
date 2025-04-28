@@ -32,8 +32,9 @@ namespace pryGestionInventario
                 if (resultado == true)
                 {
                     frmMain ventana = new frmMain();
+                    this.Hide();
                     ventana.ShowDialog();
-                    this.Close();
+                    
                 }
                 else
                 {
