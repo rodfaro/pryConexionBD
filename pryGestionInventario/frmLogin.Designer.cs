@@ -78,7 +78,7 @@
             // 
             this.btnIniciar.Enabled = false;
             this.btnIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciar.Location = new System.Drawing.Point(79, 179);
+            this.btnIniciar.Location = new System.Drawing.Point(79, 178);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(180, 40);
             this.btnIniciar.TabIndex = 4;
