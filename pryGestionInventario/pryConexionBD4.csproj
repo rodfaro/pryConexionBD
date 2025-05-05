@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="clsAdmins.cs" />
     <Compile Include="clsConexionBD.cs" />
+    <Compile Include="frmCrearAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearAdmin.Designer.cs">
+      <DependentUpon>frmCrearAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="clsProductos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCrearAdmin.resx">
+      <DependentUpon>frmCrearAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>

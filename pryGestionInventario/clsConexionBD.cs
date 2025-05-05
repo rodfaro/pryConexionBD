@@ -281,5 +281,40 @@ namespace pryGestionInventario
             }
             return usuarioCorrecto;
         }
+
+        public void CrearAdministrador(clsAdmins admin)
+        {
+            string query = $@"INSERT INTO Administradores(Usuario, Passw)
+                                VALUES (@Usuario, @Passw)";
+            try
+            {
+                if (conexion.State == ConnectionState.Closed)
+                {
+                    conexion.Open();
+                }
+
+                using (SqlCommand command = new SqlCommand(query, conexion))
+                {
+                    command.Parameters.AddWithValue("@Usuario", admin.Usuario);
+                    command.Parameters.AddWithValue("@Passw", admin.Passw);
+
+                    command.ExecuteNonQuery();
+
+                    MessageBox.Show("Nuevo administrador CREADO Correctamente", "Sistema Admin", MessageBoxButtons.OK);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message);;
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open)
+                {
+                    conexion.Close();
+                }
+            }
+        }
     }
 }

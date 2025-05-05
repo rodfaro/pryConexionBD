@@ -50,6 +50,8 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.administradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearAdministradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -58,7 +60,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sistemaToolStripMenuItem});
+            this.sistemaToolStripMenuItem,
+            this.administradoresToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1028, 24);
@@ -76,16 +79,18 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // dgvGrilla
             // 
             this.dgvGrilla.AllowUserToAddRows = false;
+            this.dgvGrilla.AllowUserToDeleteRows = false;
             this.dgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGrilla.Location = new System.Drawing.Point(356, 92);
             this.dgvGrilla.Name = "dgvGrilla";
+            this.dgvGrilla.ReadOnly = true;
             this.dgvGrilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGrilla.Size = new System.Drawing.Size(820, 445);
             this.dgvGrilla.TabIndex = 1;
@@ -219,6 +224,7 @@
             this.txtPrecio.Size = new System.Drawing.Size(168, 26);
             this.txtPrecio.TabIndex = 7;
             this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // txtStock
             // 
@@ -228,6 +234,7 @@
             this.txtStock.Size = new System.Drawing.Size(168, 26);
             this.txtStock.TabIndex = 9;
             this.txtStock.TextChanged += new System.EventHandler(this.txtStock_TextChanged);
+            this.txtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStock_KeyPress);
             // 
             // label5
             // 
@@ -288,6 +295,21 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Descripcion:";
             // 
+            // administradoresToolStripMenuItem
+            // 
+            this.administradoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearAdministradorToolStripMenuItem});
+            this.administradoresToolStripMenuItem.Name = "administradoresToolStripMenuItem";
+            this.administradoresToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.administradoresToolStripMenuItem.Text = "Administradores";
+            // 
+            // crearAdministradorToolStripMenuItem
+            // 
+            this.crearAdministradorToolStripMenuItem.Name = "crearAdministradorToolStripMenuItem";
+            this.crearAdministradorToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.crearAdministradorToolStripMenuItem.Text = "Crear administrador...";
+            this.crearAdministradorToolStripMenuItem.Click += new System.EventHandler(this.crearAdministradorToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,6 +324,7 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Gestion";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -337,6 +360,8 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.ToolStripMenuItem administradoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearAdministradorToolStripMenuItem;
     }
 }
 

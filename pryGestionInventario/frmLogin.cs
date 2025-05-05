@@ -27,7 +27,7 @@ namespace pryGestionInventario
             admin.Passw = txtPassw.Text;
 
             bool resultado = conexion.VerificarAdministradores(admin);
-            if (intentosRestantes > 0)
+            if (intentosRestantes > 1)
             {
                 if (resultado == true)
                 {

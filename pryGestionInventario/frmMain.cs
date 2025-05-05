@@ -22,7 +22,7 @@ namespace pryGestionInventario
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -184,13 +184,28 @@ namespace pryGestionInventario
         {
             Controlador();
         }
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (Char)Keys.Back && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+        }
 
         private void txtStock_TextChanged(object sender, EventArgs e)
         {
             Controlador();
         }
 
-        private void txtNombre_TextChanged_1(object sender, EventArgs e)
+        private void txtStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (Char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+            private void txtNombre_TextChanged_1(object sender, EventArgs e)
         {
             Controlador();
         }
@@ -209,6 +224,19 @@ namespace pryGestionInventario
             DataView dvGrilla = dtGrilla.DefaultView;
             dvGrilla.RowFilter = $"Nombre LIKE '%{txtBuscar.Text}%'";
         }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void crearAdministradorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCrearAdmin ventana = new frmCrearAdmin();
+            ventana.ShowDialog();
+        }
+
     }
     #endregion
 }
+
