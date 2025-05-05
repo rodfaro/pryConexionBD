@@ -31,6 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearAdministradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -50,8 +52,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.administradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearAdministradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -79,9 +79,24 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // administradoresToolStripMenuItem
+            // 
+            this.administradoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearAdministradorToolStripMenuItem});
+            this.administradoresToolStripMenuItem.Name = "administradoresToolStripMenuItem";
+            this.administradoresToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.administradoresToolStripMenuItem.Text = "Administradores";
+            // 
+            // crearAdministradorToolStripMenuItem
+            // 
+            this.crearAdministradorToolStripMenuItem.Name = "crearAdministradorToolStripMenuItem";
+            this.crearAdministradorToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.crearAdministradorToolStripMenuItem.Text = "Crear administrador...";
+            this.crearAdministradorToolStripMenuItem.Click += new System.EventHandler(this.crearAdministradorToolStripMenuItem_Click);
             // 
             // dgvGrilla
             // 
@@ -294,21 +309,6 @@
             this.label3.Size = new System.Drawing.Size(96, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Descripcion:";
-            // 
-            // administradoresToolStripMenuItem
-            // 
-            this.administradoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearAdministradorToolStripMenuItem});
-            this.administradoresToolStripMenuItem.Name = "administradoresToolStripMenuItem";
-            this.administradoresToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.administradoresToolStripMenuItem.Text = "Administradores";
-            // 
-            // crearAdministradorToolStripMenuItem
-            // 
-            this.crearAdministradorToolStripMenuItem.Name = "crearAdministradorToolStripMenuItem";
-            this.crearAdministradorToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.crearAdministradorToolStripMenuItem.Text = "Crear administrador...";
-            this.crearAdministradorToolStripMenuItem.Click += new System.EventHandler(this.crearAdministradorToolStripMenuItem_Click);
             // 
             // frmMain
             // 
