@@ -76,13 +76,15 @@
             // 
             // btnIniciar
             // 
+            this.btnIniciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnIniciar.Enabled = false;
             this.btnIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciar.Location = new System.Drawing.Point(79, 178);
+            this.btnIniciar.Location = new System.Drawing.Point(86, 182);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(180, 40);
+            this.btnIniciar.Size = new System.Drawing.Size(167, 38);
             this.btnIniciar.TabIndex = 4;
             this.btnIniciar.Text = "Iniciar Sesion";
+            this.btnIniciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 

@@ -52,10 +52,11 @@
             // txtPassw
             // 
             this.txtPassw.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassw.Location = new System.Drawing.Point(123, 88);
+            this.txtPassw.Location = new System.Drawing.Point(123, 89);
+            this.txtPassw.MaxLength = 25;
+            this.txtPassw.Multiline = true;
             this.txtPassw.Name = "txtPassw";
-            this.txtPassw.PasswordChar = '*';
-            this.txtPassw.Size = new System.Drawing.Size(153, 26);
+            this.txtPassw.Size = new System.Drawing.Size(174, 27);
             this.txtPassw.TabIndex = 8;
             this.txtPassw.TextChanged += new System.EventHandler(this.txtPassw_TextChanged);
             // 
@@ -72,11 +73,14 @@
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(123, 40);
+            this.txtUsuario.Location = new System.Drawing.Point(123, 41);
+            this.txtUsuario.MaxLength = 25;
+            this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(153, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(174, 27);
             this.txtUsuario.TabIndex = 6;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);            // 
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;

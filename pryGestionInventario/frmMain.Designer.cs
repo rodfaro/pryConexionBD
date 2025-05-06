@@ -37,7 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnAplicar = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpBoxInfo = new System.Windows.Forms.GroupBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.grpBoxInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -64,7 +64,7 @@
             this.administradoresToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1028, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1214, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -102,10 +102,12 @@
             // 
             this.dgvGrilla.AllowUserToAddRows = false;
             this.dgvGrilla.AllowUserToDeleteRows = false;
+            this.dgvGrilla.AllowUserToResizeRows = false;
             this.dgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGrilla.Location = new System.Drawing.Point(356, 92);
             this.dgvGrilla.Name = "dgvGrilla";
             this.dgvGrilla.ReadOnly = true;
+            this.dgvGrilla.RowHeadersVisible = false;
             this.dgvGrilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGrilla.Size = new System.Drawing.Size(820, 445);
             this.dgvGrilla.TabIndex = 1;
@@ -141,29 +143,29 @@
             this.btnAplicar.UseVisualStyleBackColor = true;
             this.btnAplicar.Click += new System.EventHandler(this.btnAplicar_Click);
             // 
-            // groupBox1
+            // grpBoxInfo
             // 
-            this.groupBox1.Controls.Add(this.btnEliminar);
-            this.groupBox1.Controls.Add(this.btnCancelar);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtId);
-            this.groupBox1.Controls.Add(this.cmbCategorias);
-            this.groupBox1.Controls.Add(this.btnAplicar);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtPrecio);
-            this.groupBox1.Controls.Add(this.txtStock);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.txtDesc);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 44);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(338, 493);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Agregar/modificar información";
+            this.grpBoxInfo.Controls.Add(this.btnEliminar);
+            this.grpBoxInfo.Controls.Add(this.btnCancelar);
+            this.grpBoxInfo.Controls.Add(this.label7);
+            this.grpBoxInfo.Controls.Add(this.txtId);
+            this.grpBoxInfo.Controls.Add(this.cmbCategorias);
+            this.grpBoxInfo.Controls.Add(this.btnAplicar);
+            this.grpBoxInfo.Controls.Add(this.label6);
+            this.grpBoxInfo.Controls.Add(this.txtPrecio);
+            this.grpBoxInfo.Controls.Add(this.txtStock);
+            this.grpBoxInfo.Controls.Add(this.label5);
+            this.grpBoxInfo.Controls.Add(this.label2);
+            this.grpBoxInfo.Controls.Add(this.label4);
+            this.grpBoxInfo.Controls.Add(this.txtNombre);
+            this.grpBoxInfo.Controls.Add(this.txtDesc);
+            this.grpBoxInfo.Controls.Add(this.label3);
+            this.grpBoxInfo.Location = new System.Drawing.Point(12, 44);
+            this.grpBoxInfo.Name = "grpBoxInfo";
+            this.grpBoxInfo.Size = new System.Drawing.Size(338, 493);
+            this.grpBoxInfo.TabIndex = 11;
+            this.grpBoxInfo.TabStop = false;
+            this.grpBoxInfo.Text = "Agregar/modificar información";
             // 
             // btnEliminar
             // 
@@ -314,8 +316,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 573);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1214, 565);
+            this.Controls.Add(this.grpBoxInfo);
             this.Controls.Add(this.dgvGrilla);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -329,8 +331,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpBoxInfo.ResumeLayout(false);
+            this.grpBoxInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,7 +347,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnAplicar;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpBoxInfo;
         private System.Windows.Forms.ComboBox cmbCategorias;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPrecio;
